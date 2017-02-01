@@ -1,4 +1,4 @@
-# 3-Tier Red HAt on Azure 
+# 3-Tier Red Hat on Azure 
 ## Solution Overview 
 This Azure Quick Start template deploys a 3 Tier Red Hat Solution on Azure.  The Solution includes Presentation Tier Web Servers, Application tier App Servers and Data Tier Database Servers running Red Hat Enterprise Linux 7.3. Template will build everything starting from Azure Infrastructure components to Red Hat VMs deployment. This template will deploy multiple number of VMs in each tier as per requirement. 
 
@@ -23,23 +23,26 @@ This template will deploy:
 -	One Jump VM.
 -	Two Red Hat Enterprise Linux VMs in each tier.
 
-![Deployment Solution Architecture](https://github.com/SpektraSystems/barracuda-waf-solution/blob/master/images/barracuda-architecture.png?raw=true)
+![Deployment Solution Architecture](https://github.com/akhil-thomas011/3-tier-RedHat/blob/master/images/architecture.png?raw=true)
 
 ##Licenses and Costs 
 
-This Barracuda Web Application Firewall is the PAYG model and doesn't require the user to license it, it will be licensed automatically after the instance is launched first time and user will be charged hourly for Barracuda Web Application Firewall Software on Microsoft. Click [here](https://azure.microsoft.com/en-us/marketplace/partners/barracudanetworks/waf/#hourly) for pricing details.
+The Red Hat Enterprise Linux 7.3 image used in this solution is the PAYG model and doesn't require the user to license it, it will be licensed automatically after the instance is launched first time. Use of this image carries a separate hourly charge that is in addition to Microsoft's Linux VM rates. Total price of the VM consists of the base Linux VM price (shown on the next pages) plus RHEL VM image surcharge.  Click [here](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/red-hat/) for pricing details.
 
 ##Prerequisites 
 
-- Azure Subscription with specified payment method (Barracuda WAF is a market place product and requires payment method to be specified in Azure Subscription
+- Azure Subscription with specified payment method (Red Hat Enterprise Linux is a market place product and requires payment method to be specified in Azure Subscription
 -	User account with admin or contributor access to the given azure subscription
 
 ##Deployment Steps  
 
 Build your Barracuda WAF environment on Azure in a few simple steps:  
 - Launch the Template by click on Deploy on Azure.  
-- Fill in all the required parameter values. Accept the terms and condition on click Purchase. The deployment takes about 30 minutes. 
-- Follow the post deployment configuration document [here](https://github.com/SpektraSystems/barracuda-waf-solution/blob/master/images/barracuda-waf-post-deployment-configuration-guide.pdf) for further configuration. 
+- Fill in all the required parameter values. Accept the terms and condition on click Purchase. The deployment takes about 4 minutes. 
+
+##Post Deployment Steps 
+
+After successful deployment, this template will output the IP address and FQDN of both external load balancer and Jump VM. User can access Web Tier VMs via external load balancer IP/FQDN and admin can access all VMs by logging into the Jump VM via Jump VM IP.
 
 ##Support 
 
